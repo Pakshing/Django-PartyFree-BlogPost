@@ -1,13 +1,13 @@
 from django import forms
 from django.core import validators
-from .validators import validatingPhoneNo_validator,confirmPhoneNo_validator
+from .validators import validatingPhoneNo_validator,confirmPhoneNo_validator, validatingPositiveWaitTime
 
 
 class UserForm(forms.Form):
 
     userPhoneNo = forms.CharField(validators=[validatingPhoneNo_validator])
     v_userPhoneNo = forms.CharField(label='Enter your phone number again.')
-    waitTime = forms.IntegerField()
+    waitTime = forms.IntegerField(label='min(s): must be positive integer',validators=[validatingPositiveWaitTime])
 
     def clean_v_userPhoneNo(self):
         passed_number = self.cleaned_data.get("userPhoneNo")

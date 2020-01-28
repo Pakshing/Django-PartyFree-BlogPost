@@ -19,3 +19,8 @@ def confirmPhoneNo_validator (userPhoneNo):
     def __call__(self):
         if userPhoneNo != v_userPhoneNo:
             raise ValidationError(_('The Numbers have to match'))
+
+def validatingPositiveWaitTime(waitTime):
+
+    if waitTime < 0:
+        raise ValidationError(_('Wait Time Cannot Be Less Than 0 MIN')) 
