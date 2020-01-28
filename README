@@ -1,0 +1,7 @@
+1.Run Celery Server
+celery -A ProjectWhisper worker -l info
+
+2.Run WebServer
+python3 manage.py runserver
+
+
