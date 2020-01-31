@@ -6,6 +6,10 @@ from twilio.twiml.voice_response import Play, VoiceResponse
 #account_sid = ''
 #auth_token = ''
 
+account_sid = 'AC94a0517d20fc9a6ad2eee9d5423791b7'
+auth_token = '7b740f75b97c300dea9d119c93b8f252'
+
+
 client = Client(account_sid, auth_token)
 CallFrom = "+19167961080"
 
