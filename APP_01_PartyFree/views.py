@@ -5,6 +5,8 @@ from .tasks import sleepy
 #twilio
 
 # Create your views here.
+def index_new(request):
+    return render(request,'PartyFree/index_new.html')
 
 def index(request):
     form = forms.UserForm()
