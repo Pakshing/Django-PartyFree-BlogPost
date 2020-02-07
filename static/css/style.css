@@ -5,11 +5,13 @@ html,body{
   width: 100%;
   font-family: 'Poppins', sans-serif;
   color: #222;
+  display: table;
 }
 .navbar-icon{
   width: 40px;
   height: 40px;
 }
+
 
 .navbar{
   padding: .8rem;
@@ -18,7 +20,7 @@ html,body{
 
 
 nav{
-  background-color: ##E9967A;
+  background-color: #E9967A;
 }
 
 
@@ -30,6 +32,18 @@ nav{
   font-size: 1.1em !important;
 }
 
+.carousel-indicators {
+    padding-bottom: 10rem;
+}
+
+.carousel-indicators li {
+    width: 100px;
+}
+
+.carousel-inner{
+  width: auto;
+  height: 90%;
+}
 .carousel-inner img{
   width: 100%;
   height: 100%;
@@ -69,7 +83,9 @@ nav{
   margin: 0 auto;
   padding-top: 2rem;
 }
-
+.hr_nav{
+   border-top: 5px solid white;
+}
 .welcom hr{
   border-top: 2px solid #b4b4b4;
   width: 95%
@@ -135,6 +151,8 @@ footer{
   background-color: #3f3f3f;
   color: #d5d5d5;
   padding-top: 2rem;
+  display: table-row;
+  height: 0;
 }
 hr.light{
   border-top: 1px solid #d5d5d5;
@@ -217,7 +235,7 @@ hr.light-100{
   }
 
   .carousel-indicators{
-    display: none;;
+    display: none;
   }
 
   .display-4{

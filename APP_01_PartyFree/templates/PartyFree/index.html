@@ -13,20 +13,64 @@
   </head>
   <body>
 
-    <div class="container">
-      <h1>PartyFree</h1>
-      <form method="post">
-        <div class="content-form">
-          {{form.as_p}}
-          {% for field in form%}
-          {% endfor %}
-          {% csrf_token %}
-          <input type="submit" name="btn btn-primary" value="submit">
-        </div>
-      </form>
-    </div>
+<div class="introduction">
+  <h1>PartyFree</h1>
+  <p>PartyFree is an app that allows you to set a timer and receive a "Drunk Voice" call. </p>
+  <br>
+  <br>
+</div>
 
 
+<div class="row padding">
+<div class="container col-lg-5">
+    <form class="django-form" method="post">
+      <div class="form">
+        {% csrf_token %}
+        {{form.userPhoneNo}}
+        <label for="name" class="label-name">
+          <span class="content-name">Your Phone Number </span>
+        </label>
+      </div>
+    <br>
+      <div class="form">
+        {% csrf_token %}
+        {{form.v_userPhoneNo}}
+        <label for="name" class="label-name">
+          <span class="content-name">Verify </span>
+        </label>
+      </div>
+    <br>
+      <div class="form">
+        {% csrf_token %}
+        {{form.waitTime}}
+        <label for="name" class="label-name">
+          <span class="content-name">Wait Time</span>
+        </label>
+      </div>
+      <br>
+      <input type="submit" class="btn btn-secondary" name="" value="Submit">
+    </form>
+    <br>
+</div>
+<div class="container col-lg-7">
+  <ol>
+    <li>Enter your phone number.</li>
+    <br>
+    <br>
+    <br>
+    <li>Confirm your phone number.</li>
+    <br>
+    <br>
+    <br>
+    <li>Enter how long you want to receive the call.</li>
+    <br>
+    <br>
+    <br>
+  </ol>
+</div>
+</div>
+
+<a class="navbar-brand" href="{% url 'index' %}"> <img class="navbar-icon" src="{% static "images/run.png" %}"> </a>
 
 
     <!-- Latest compiled and minified jQuery -->

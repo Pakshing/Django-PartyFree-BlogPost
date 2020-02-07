@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+<link rel="stylesheet" href="{% static "css/about_me.css" %}">
+<div class="container-fluid">
+  <div class="row padding">
+    <div class="col-md-6 col-lg-6">
+      <h1 class="display-4">About Me</h1>
+      <h3 class="lead"> I am currently a junior Computer Science student at San Jose State University.
+        I am seeking an internship/work opportunity to enhance both my soft skills and hard skills.
+        I am a team player and I can adapt to the new environment very quickly. I have two years of experience in
+        data structures,algorithms and some programming languages such as Python, Java, C++, HTML, CSS. </h3>
+        <br>
+        <a href="https://www.linkedin.com/in/pakshing-kan/" class="btn btn-primary active" role="button" aria-pressed="true">LinkedIn</a>
+    </div>
+    <div class="col-md-6 col-lg-6 card_padding">
+      <div class="card">
+        <img class="card-img-top about-me-card" src="{% static "images/pak.jpg" %}">
+        <div class="card-body">
+          <h5 class="card-title text-center">Pak Shing Kan </h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

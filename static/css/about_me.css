@@ -1,0 +1,12 @@
+body{
+  background-color:white;
+}
+
+.padding{
+  padding: 3.5rem;
+}
+
+div.card{
+  height: 85%;
+  width: 85%;
+}

@@ -5,9 +5,12 @@ from .validators import validatingPhoneNo_validator,confirmPhoneNo_validator, va
 
 class UserForm(forms.Form):
 
-    userPhoneNo = forms.CharField(validators=[validatingPhoneNo_validator],widget=forms.TextInput(attrs={'class' : 'form-control'}))
-    v_userPhoneNo = forms.CharField(label='Enter your phone number again.',widget=forms.TextInput(attrs={'class' : 'form-control'}))
-    waitTime = forms.IntegerField(label='min(s): must be positive integer',validators=[validatingPositiveWaitTime],widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    userPhoneNo = forms.CharField(validators=[validatingPhoneNo_validator],
+                                    widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    v_userPhoneNo = forms.CharField(label='Enter your phone number again.',
+                                    widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    waitTime = forms.IntegerField(label='min(s): must be positive integer',validators=[validatingPositiveWaitTime],
+                                    widget=forms.TextInput(attrs={'class' : 'form-control'}))
 
     def clean_v_userPhoneNo(self):
         passed_number = self.cleaned_data.get("userPhoneNo")
