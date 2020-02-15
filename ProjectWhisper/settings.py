@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'APP_01_PartyFree',
     'APP_02_Blog',
     'bootstrap4',
+    'users',
+    'crispy_forms',
 
 ]
 
@@ -127,6 +129,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     STATIC_DIR,
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL='blog:blog-home'
+LOGIN_URL = 'login'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
 
 CELERY_BROKER_URL = 'redis://h:pa4aec5859a2632908644d66279b940e67e45c15e9f6e861ce6c15c7fde5b7be7@ec2-52-4-121-255.compute-1.amazonaws.com:16519'
 CELERY_ACCEPT_CONTENT = ['json']
