@@ -28,7 +28,7 @@ SECRET_KEY = '=q33wn#_g#ic6jzq(d=s+cg9gjm9nff4@j!tgl2z$o__u03))u'
 #SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') =='True')
 
 ALLOWED_HOSTS = ['djangoprojectwhisper.herokuapp.com','127.0.0.1']
 
