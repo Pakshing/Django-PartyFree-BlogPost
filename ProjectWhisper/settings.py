@@ -24,8 +24,8 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=q33wn#_g#ic6jzq(d=s+cg9gjm9nff4@j!tgl2z$o__u03))u'
-#SECRET_KEY = os.environ.get('SECRET_KEY')
+#SECRET_KEY = '=q33wn#_g#ic6jzq(d=s+cg9gjm9nff4@j!tgl2z$o__u03))u'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') =='True')
@@ -158,7 +158,8 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 
-CELERY_BROKER_URL = 'redis://h:pa4aec5859a2632908644d66279b940e67e45c15e9f6e861ce6c15c7fde5b7be7@ec2-52-4-121-255.compute-1.amazonaws.com:16519'
+#CELERY_BROKER_URL = 'redis://h:pa4aec5859a2632908644d66279b940e67e45c15e9f6e861ce6c15c7fde5b7be7@ec2-52-4-121-255.compute-1.amazonaws.com:16519'
+CELERY_BROKER_URL ='redis://h:p764a58690ca29a06dc124db01837eea8b183104a169f63904923eb14facac751@ec2-3-211-45-81.compute-1.amazonaws.com:23589'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
