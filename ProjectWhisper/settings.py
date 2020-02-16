@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'APP_01_PartyFree',
-    'bootstrap4'
+    'APP_02_Blog',
+    'bootstrap4',
+    'users',
+    'crispy_forms',
+    'storages',
+
 ]
 
 MIDDLEWARE = [
@@ -125,6 +130,30 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     STATIC_DIR,
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL='blog:blog-home'
+LOGIN_URL = 'login'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
+
+
+#AWS S3 data storage
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = 'us-east-2' #change to your region
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
 
 CELERY_BROKER_URL = 'redis://h:pa4aec5859a2632908644d66279b940e67e45c15e9f6e861ce6c15c7fde5b7be7@ec2-52-4-121-255.compute-1.amazonaws.com:16519'
 CELERY_ACCEPT_CONTENT = ['json']

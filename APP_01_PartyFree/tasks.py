@@ -1,14 +1,11 @@
 from celery import shared_task
 from time import sleep
 from twilio.rest import Client
+import os
 from twilio.twiml.voice_response import Play, VoiceResponse
 
-#account_sid = ''
-#auth_token = ''
-
-
-
-
+account_sid = os.environ.get('TWILIO_ID')
+auth_token = os.environ.get('TWILIO_TOKEN')
 
 client = Client(account_sid, auth_token)
 CallFrom = "+19167961080"
