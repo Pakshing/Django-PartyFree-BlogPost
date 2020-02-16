@@ -22,13 +22,13 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = '=q33wn#_g#ic6jzq(d=s+cg9gjm9nff4@j!tgl2z$o__u03))u'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = '=q33wn#_g#ic6jzq(d=s+cg9gjm9nff4@j!tgl2z$o__u03))u'
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangoprojectwhisper.herokuapp.com']
+ALLOWED_HOSTS = ['djangoprojectwhisper.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'APP_01_PartyFree',
     'APP_02_Blog',
+    "bootstrap4",
     'users',
     'crispy_forms',
     'storages',
