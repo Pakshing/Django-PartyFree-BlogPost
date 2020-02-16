@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+#import django_redis
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -159,3 +161,5 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 CELERY_BROKER_URL = 'redis://h:pa4aec5859a2632908644d66279b940e67e45c15e9f6e861ce6c15c7fde5b7be7@ec2-52-4-121-255.compute-1.amazonaws.com:16519'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+
+django_heroku.settings(locals())
