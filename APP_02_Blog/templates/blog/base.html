@@ -20,9 +20,9 @@
 </head>
 <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <nav class="navbar navbar-expand-md bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog:blog-home' %}">Django Blog</a>
+          <a class="navbar-brand mr-4" href="{% url 'blog:blog-home' %}">Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,13 +60,21 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Our Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
+            <h3>Sidebar</h3>
+            <p class='text-muted'>Link to other projects
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
+                <a href="{% url 'index' %}">
+                  <li class="list-group-item list-group-item-light">Profilio Page</li>
+                </a>
+                <a href="{% url 'APP_01_PartyFree:partyfree-index' %}">
+                  <li class="list-group-item list-group-item-light">Web App: PartyFree</li>
+                </a>
+                <a href="https://github.com/Pakshing/web_blocker">
+                  <li class="list-group-item list-group-item-light">Github: Web Blocker</li>
+                </a>
+                <a href="https://github.com/Pakshing/Calculator">
+                  <li class="list-group-item list-group-item-light">Github: Basic Java Calculator</li>
+                </a>
               </ul>
             </p>
           </div>

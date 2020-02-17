@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib import messages
 from .import forms
 from .tasks import sleepy
 #twilio
@@ -19,5 +20,7 @@ def index(request):
             print(form.cleaned_data['userPhoneNo'])
             print(form.cleaned_data['waitTime'])
             sleepy.delay(form.cleaned_data['waitTime'],form.cleaned_data['userPhoneNo'])
-            return render(request,'PartyFree/finish_page.html')
+            messages.success(request, 'Your call has been requested successfully.')
+            return redirect('APP_01_PartyFree:partyfree-index')
+
     return render(request,'PartyFree/index.html',{'form':form})

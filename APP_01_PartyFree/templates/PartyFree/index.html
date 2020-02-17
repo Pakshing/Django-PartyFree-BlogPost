@@ -13,7 +13,16 @@
   </head>
   <body>
 
+
+
 <div class="introduction">
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
   <h1>PartyFree</h1>
   <p>PartyFree is an app that allows you to set a timer and receive a "Drunk Voice" call. </p>
   <br>
