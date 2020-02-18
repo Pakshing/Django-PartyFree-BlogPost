@@ -9,48 +9,45 @@
     <li data-target="#slides" data-slide-to="2"></li>
     <li data-target="#slides" data-slide-to="3"></li>
   </ul>
+
 <div class="carousel-inner">
+
   <div class="carousel-item active">
     <img src="{%static "images/sleep_on_the_street.jpg" %}" >
     <div class="carousel-caption">
       <h1 class="display-2">Party Free</h1>
-      <br>
-      <h3>Set a timer to recieve a "drunk voice" call to leave your boring party</h3>
-      <br>
+      <h3>Recieve a "intoxicated voice" call to leave your boring party</h3>
       <a href="{% url 'partyfree:partyfree-index' %}"> <button type="button" class="btn btn-outline-light btn-lg" >View</button> </a>
     </div>
   </div>
+
   <div class="carousel-item">
     <img src="{%static "images/blog-demo.jpg" %}">
     <div class="carousel-caption">
       <h1 class="display-2">Django Blog</h1>
-      <br>
       <h3>Creates blog post to share your thoughts</h3>
-      <br>
       <a href="{% url 'blog:blog-home' %}"> <button type="button" class="btn btn-outline-light btn-lg" >View</button> </a>
     </div>
   </div>
+
   <div class="carousel-item">
     <img src="{%static "images/facebook.jpg" %}">
     <div class="carousel-caption">
-      <h1 class="display-3">Web Blocker</h1>
-      <br>
+      <h1 class="display-2">Web Blocker</h1>
       <h3>Blocks any distractive website for desired period of time</h3>
-      <br>
       <a href="https://github.com/Pakshing/web_blocker"> <button type="button" class="btn btn-outline-light btn-lg" >Github</button> </a>
     </div>
   </div>
+
   <div class="carousel-item">
-    <img src="{%static "images/calculator.jpg" %}">
+    <img src="{%static "images/calculator.jpg" %}" >
     <div class="carousel-caption">
-      <h1 class="display-4">Java Calculator</h1>
-      <br>
-      <h3>Capable of basic arithmetic utilizing basic UI</h3>
-      <br>
-      <a href="https://github.com/Pakshing/Calculator"> <button type="button" class="btn btn-outline-light btn-lg" >Github</button> </a>
+      <h1 class="display-2">Just A Calculator</h1>
+      <h3>Provides basic arithmetic calculation with simple user interface (UI)</h3>
+      <a href="https://github.com/Pakshing/Calculator"> <button type="button" class="btn btn-outline-light btn-lg" >View</button> </a>
     </div>
   </div>
-</div>
-</div>
 
+</div>
+</div>
 {% endblock %}

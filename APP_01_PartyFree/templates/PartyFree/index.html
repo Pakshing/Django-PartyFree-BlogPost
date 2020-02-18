@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
 
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -23,15 +22,18 @@
       </div>
     {% endfor %}
   {% endif %}
-  <h1>PartyFree</h1>
-  <p>PartyFree is an app that allows you to set a timer and receive a "Drunk Voice" call. </p>
+  <div class="heading col-lg-12 col-md-12 col-sm-12">
+    <h1>PartyFree</h1>
+    <p>PartyFree is an app that allows you to set a timer and receive a "Drunk Voice" call. </p>
+  </div>
+
   <br>
   <br>
 </div>
 
 
 <div class="row padding">
-<div class="container col-lg-5">
+<div class="container ">
     <form class="django-form" method="post">
       <div class="form">
         {% csrf_token %}
@@ -61,26 +63,17 @@
     </form>
     <br>
 </div>
-<div class="container col-lg-7">
+<div class="container col-lg-7 col-sm-12">
   <ol>
     <li>Enter your phone number.</li>
-    <br>
-    <br>
-    <br>
     <li>Confirm your phone number.</li>
-    <br>
-    <br>
-    <br>
     <li>Enter how long you want to receive the call.</li>
-    <br>
-    <br>
-    <br>
   </ol>
 </div>
 </div>
-
-<a class="navbar-brand" href="{% url 'index' %}"> Portfolio </a>
-
+<div class="container-fluid text-center">
+  <a class="navbar-brand" href="{% url 'index' %}"> Portfolio </a>
+</div>
 
 
     <!-- Latest compiled and minified jQuery -->

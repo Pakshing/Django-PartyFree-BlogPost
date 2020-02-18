@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pak Shing Kan</title>
+    <title>PakShing Kan's Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -15,31 +15,40 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}"> Portfolio </a>
-        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-        <button type="button" data-toggler="collaspe" data-target="#navbarResponsive" class="navbar-toggler">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'index' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about_me' %}">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/pakshing-kan">LinkedIn</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'index' %}"> <h4>Portfolio</h4></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about_me' %}">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/pakshing-kan">LinkedIn</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="{% url 'APP_01_PartyFree:partyfree-index' %}">Party Free</a>
+            <a class="dropdown-item" href="{% url 'blog:blog-home' %}">Django Blog</a>
+            <a class="dropdown-item" href="https://github.com/Pakshing/web_blocker">Web Blocker</a>
+            <a class="dropdown-item" href="https://github.com/Pakshing/Calculator">Just A Calculator</a>
+          </div>
+        </li>
+      </ul>
+    </div>
     </nav>
-    {% block content %}
-    {% endblock %}
-
+  </div>
+{% block content %}
+{% endblock %}
 
   </body>
 </html>
