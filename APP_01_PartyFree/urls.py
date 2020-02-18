@@ -6,5 +6,4 @@ app_name = 'APP_01_PartyFree'
 
 urlpatterns=[
     path('',views.index,name='partyfree-index'),
-    path('new/', views.index_new,name='index_new')
 ]
