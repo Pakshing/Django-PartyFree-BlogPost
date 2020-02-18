@@ -1,2 +1,2 @@
 web: gunicorn ProjectWhisper.wsgi
-worker: celery -A ProjectWhisper worker -l info
+worker: celery worker -A tasks.app -l INFO
