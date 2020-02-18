@@ -2,7 +2,7 @@ This folder includes my two project: PartyFree and Blog Poster.
 I integrated them as one big project, so I don't have to upload it online separetly.
 
 
-Party Free      						          	            	           		           August 2019 - Present
+Party Free      						          	            	           		          August 2019 - Present
 Sets a timer to receive an “intoxicated voice” call to leave a social engagement smoothly
 Technology: Python, Django, Twilio, Celery, Bootstrap4, Heroku, CSS, HTML
 
