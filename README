@@ -9,8 +9,7 @@ Portfolio site: https://djangoprojectwhisper.herokuapp.com/
 Party Free 
 Sets a timer to receive an “intoxicated voice” call to leave a social engagement smoothly
 Technology: Python, Django, Twilio, Celery, Bootstrap4, Heroku, CSS, HTML
-https://djangoprojectwhisper.herokuapp.com/
-
+https://djangoprojectwhisper.herokuapp.com/partyfree/
 
 Blog Poster
 Creates posts, reads posts, and leaves comments to other users			          
