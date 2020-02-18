@@ -6,16 +6,17 @@ It is my all-time favorite.
 Portfolio site: https://djangoprojectwhisper.herokuapp.com/
 
 
-Party Free: https://djangoprojectwhisper.herokuapp.com/partyfree/   
+Party Free 
 Sets a timer to receive an “intoxicated voice” call to leave a social engagement smoothly
 Technology: Python, Django, Twilio, Celery, Bootstrap4, Heroku, CSS, HTML
+https://djangoprojectwhisper.herokuapp.com/
 
 
-Blog Poster: https://djangoprojectwhisper.herokuapp.com/blog/
+Blog Poster
 Creates posts, reads posts, and leaves comments to other users			          
 Obtains full user authentication system and store data in a SQLite database
 Technology: Python, Django, SQLite, PostgreSQL, AWS S3, CSS, HTML 
-
+https://djangoprojectwhisper.herokuapp.com/blog/
 
 
 
